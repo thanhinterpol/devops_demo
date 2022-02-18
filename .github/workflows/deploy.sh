@@ -16,12 +16,12 @@ git init
 git add -A
 git commit -m 'deploy'
 git branch -M main
-git remote add origin https://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@github.com/thanhinterpol/vuejs_demo.git
+git remote add origin https://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@github.com/thanhinterpol/vuejs_demo.git
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:thanhinterpol/thanhinterpol.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push https://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@github.com/thanhinterpol/vuejs_demo.git main:gh-pages
+git push https://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@github.com/thanhinterpol/vuejs_demo.git main:gh-pages
 
 cd -
