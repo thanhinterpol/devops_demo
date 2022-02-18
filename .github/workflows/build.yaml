@@ -1,11 +1,11 @@
-name: Deploy to Github Pages
+name: DevOps Learning
 on:
   push:
     branches:
       - main
 jobs:
   gh-pages-deploy:
-    name: Deploying to Github Pages
+    name: Build & Deploy VueJs
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
