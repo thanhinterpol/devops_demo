@@ -15,12 +15,13 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-# git branch -M main
+git branch -M main
+git remote add origin https://github.com/thanhinterpol/vuejs_demo.git
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:thanhinterpol/thanhinterpol.github.io.git main
+# git push -f git@github.com:thanhinterpol/thanhinterpol.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:thanhinterpol/vuejs_demo.git main:gh-pages
+git push https://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@github.com/thanhinterpol/vuejs_demo.git main:gh-pages
 
 cd -
