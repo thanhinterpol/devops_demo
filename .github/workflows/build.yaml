@@ -19,4 +19,4 @@ jobs:
         # - name: Build
         #   run: npm run build
         - name: Deploy
-          run: bash deploy.sh
+          run: bash .github/workflows/deploy.sh
