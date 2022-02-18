@@ -16,7 +16,7 @@ git init
 git add -A
 git commit -m 'deploy'
 git branch -M main
-git remote add origin https://github.com/thanhinterpol/vuejs_demo.git
+git remote add origin https://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@github.com/thanhinterpol/vuejs_demo.git
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:thanhinterpol/thanhinterpol.github.io.git main
