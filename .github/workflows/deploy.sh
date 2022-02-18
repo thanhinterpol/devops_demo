@@ -21,7 +21,6 @@ git branch -M main
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:thanhinterpol/vuejs_demo.git main:gh-pages
-git push -f https://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@github.com/thanhinterpol/vuejs_demo.git main:gh-pages
+git push -f git@github.com:thanhinterpol/vuejs_demo.git main:gh-pages
 
 cd -
