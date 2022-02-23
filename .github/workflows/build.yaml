@@ -22,6 +22,7 @@ jobs:
         # - name: Build
         #   run: npm run build
         - name: Deploy
+          uses: actions/checkout@main
           with:
             repository: thanhinterpol/vuejs_demo
             token: ${{ secrets.DEVOPS }}
