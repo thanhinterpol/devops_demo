@@ -19,11 +19,9 @@ jobs:
           run: npm i
         - name: Set Creds
           run: git config --global user.name "thanhinterpol" && git config --global user.email "thanhinterpol@gmail.com"
-        # - name: Build
-        #   run: npm run build
+        - name: Build
+          run: npm run build
         - name: Deploy
-          uses: actions/checkout@main
-          with:
-            repository: thanhinterpol/vuejs_demo
-            token: ${{ secrets.DEVOPS }}
+          env:
+            GITHUB_TOKEN: ${{ github.DEVOPS }}
           run: bash .github/workflows/deploy.sh
