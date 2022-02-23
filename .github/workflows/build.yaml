@@ -17,11 +17,21 @@ jobs:
             repo-token: ${{ secrets.DEVOPS }}
         - name: Install packages
           run: npm i
-        - name: Set Creds
-          run: git config --global user.name "thanhinterpol" && git config --global user.email "thanhinterpol@gmail.com"
+        # - name: Set Creds
+        #   run: git config --global user.name "thanhinterpol" && git config --global user.email "thanhinterpol@gmail.com"
         - name: Build
           run: npm run build
-        - name: Deploy
+        - name: Pushes to another repository
+          id: dist
+          uses: thanhinterpol/vuejs_demo@main
           env:
-            GITHUB_TOKEN: ${{ github.DEVOPS }}
-          run: bash .github/workflows/deploy.sh
+            API_TOKEN_GITHUB: ${{ secrets.DEVOPS }}
+          with:
+            source-directory: dist/
+            destination-github-username: 'thanhinterpol'
+            destination-repository-name: 'vuejs_demo'
+            user-email: thanhinterpol@gmail.com
+            commit-message: Deploy VueJs Project
+            target-branch: main
+        - name: Test get variable exported by vuejs_demo
+          run: echo $DESTINATION_CLONED_DIRECTORY
