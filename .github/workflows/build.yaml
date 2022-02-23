@@ -22,4 +22,7 @@ jobs:
         # - name: Build
         #   run: npm run build
         - name: Deploy
+          with:
+            repository: thanhinterpol/vuejs_demo
+            token: ${{ secrets.DEVOPS }}
           run: bash .github/workflows/deploy.sh
