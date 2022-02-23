@@ -17,7 +17,7 @@ git add -A
 git commit -m 'deploy'
 git branch -M main
 echo "Thanh 1"
-git remote add origin "https://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@github.com/thanhinterpol/vuejs_demo.git"
+git remote add origin "https://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@github.com/thanhinterpol/vuejs_demo.git"
 git remote -v
 
 # if you are deploying to https://<USERNAME>.github.io
