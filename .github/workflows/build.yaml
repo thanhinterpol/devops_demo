@@ -23,7 +23,7 @@ jobs:
           run: npm run build
         - name: Pushes to another repository
           id: dist
-          uses: thanhinterpol/vuejs_demo@main
+          uses: thanhinterpol/devops_demo@main
           env:
             API_TOKEN_GITHUB: ${{ secrets.DEVOPS }}
           with:
