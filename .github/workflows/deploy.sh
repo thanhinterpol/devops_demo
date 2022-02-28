@@ -11,9 +11,9 @@ npm run build
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
-
+mv -T dist docs
 # git init
-git add dist/*
+git add docs/*
 git commit -m 'deploy'
 # git branch -M main
 # echo "Thanh 1"
