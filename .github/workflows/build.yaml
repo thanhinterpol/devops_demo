@@ -22,7 +22,7 @@ jobs:
         - name: Build
           run: npm run build
         - name: Pushes to another repository
-          id: dist
+          id: thanhinterpol
           uses: thanhinterpol/devops_demo@main
           env:
             API_TOKEN_GITHUB: ${{ secrets.DEVOPS }}
