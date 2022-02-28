@@ -22,8 +22,7 @@ git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:thanhinterpol/thanhinterpol.github.io.git main
-echo "Thanh 2"
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push origin main
-echo "Thanh 3"
+rm -rf dist docs
 cd /
