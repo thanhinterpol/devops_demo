@@ -26,4 +26,4 @@ echo "Thanh 2"
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push origin main
 echo "Thanh 3"
-cd -
+cd /
