@@ -6,5 +6,6 @@
 //       : '/'
 //   }
 module.exports = {
-  publicPath: '/devops_demo/'
+  publicPath: './'
+  // publicPath: '/devops_demo/'
 };

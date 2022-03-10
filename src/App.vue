@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to ThanhDX"/>
+  <HelloWorld msg="ThanhDX 10.03.02"/>
 </template>
 
 <script>

@@ -2,7 +2,7 @@ name: DevOps Learning
 on:
   push:
     branches:
-      - main
+      - s3
 jobs:
   gh-pages-deploy:
     name: Build & Deploy VueJs
@@ -17,22 +17,12 @@ jobs:
             repo-token: ${{ secrets.DEVOPS }}
         - name: Install packages
           run: npm i
-        - name: Set Creds
-          run: git config --global user.name "thanhinterpol" && git config --global user.email "thanhinterpol@gmail.com"
-        - name: Build & Deploy
-          run: bash .github/workflows/deploy.sh
-        #   run: npm run build
-        # - name: Pushes to another repository
-        #   id: thanhinterpol
-        #   uses: thanhinterpol/devops_demo@main
-        #   env:
-        #     API_TOKEN_GITHUB: ${{ secrets.DEVOPS }}
-        #   with:
-        #     source-directory: dist/
-        #     destination-github-username: 'thanhinterpol'
-        #     destination-repository-name: 'vuejs_demo'
-        #     user-email: thanhinterpol@gmail.com
-        #     commit-message: Deploy VueJs Project
-        #     target-branch: main
-        # - name: Test get variable exported by vuejs_demo
-        #   run: echo $DESTINATION_CLONED_DIRECTORY
+        - name: Build
+          run: npm run build
+        - name: Upload to S3
+          run: |
+            aws s3 rm s3://${{secrets.S3_BUCKET}} --recursive && aws s3 cp ./dist s3://${{secrets.S3_BUCKET}} --recursive
+          env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
